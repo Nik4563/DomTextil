@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДомТекстиля</title>
+    <link rel="stylesheet" href="Styles/header-styles.css">
+    <link rel="stylesheet" href="Styles/footer-styles.css">
+    <link rel="stylesheet" href="Styles/index-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Верхняя часть шапки -->
+        <div class="header-top">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png"></img>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="nav-menu">
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="nav-link">Каталог</a>
+                    <a href="#history" class="nav-link">История</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="social-links">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Контакты и вход -->
+                <div class="header-contacts">
+                    <div class="phone-block">
+                        <a href="tel:+78005553535" class="phone-number">8 800 555 35 35</a>
+                        <span class="work-hours">Пн-СБ с 11:00 до 20:00</span>
+                    </div>
+                    <a href="Forms/login-form.html" class="login-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Войти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть шапки (красная) -->
+        <div class="header-bottom">
+            <div class="container">
+                <!-- Кнопка каталога -->
+                <div class="catalog-dropdown">
+                    <button class="catalog-btn" id="catalogBtn">
+                        <i class="fas fa-th"></i>
+                        <span>Каталог</span>
+                    </button>
+
+                    <div class="catalog-menu" id="catalogMenu">
+                        <ul class="catalog-categories">
+                            <li class="catalog-category">
+                                <a href="catalog-odeyala.html" class="catalog-link">
+                                    <i class="fas fa-mattress-pillow"></i>
+                                    <span>Одеяла</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-bed"></i>
+                                    <span>Подушки</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-couch"></i>
+                                    <span>Матрасы</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>Комплекты постельного белья</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-bath"></i>
+                                    <span>Полотенца</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-home"></i>
+                                    <span>Пледы и покрывала</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-percent"></i>
+                                    <span>Распродажа</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Поиск -->
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск товаров для дома">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Корзина -->
+                <a href="cart.html" class="cart">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">3</span>
+                    </div>
+                    <span class="cart-total">0 ₽</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+
+            <!-- Быстрые ссылки -->
+            <div class="quick-links">
+                <a href="#" class="quick-link">
+                    <i class="fas fa-bed"></i>
+                    <span>Постельное бельё</span>
+                </a>
+                <a href="catalog-odeyala.html" class="quick-link">
+                    <i class="fas fa-mattress-pillow"></i>
+                    <span>Одеяла</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <i class="fas fa-couch"></i>
+                    <span>Пледы и покрывала</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <i class="fas fa-bath"></i>
+                    <span>Полотенца</span>
+                </a>
+            </div>
+
+            <!-- Секция История -->
+            <section id="history" class="history-section">
+                <h2 class="section-title">НАША ИСТОРИЯ</h2>
+
+                <!-- Баннер слайдер -->
+                <div class="banner-slider">
+                    <div class="banner-slide active">
+                        <div class="banner-image">
+                            <img src="Pictures/banner_odeyalo_natural.jpg" alt="История ДомТекстиля">
+                        </div>
+                    </div>
+
+                    <!-- Навигация слайдера -->
+                    <div class="slider-nav">
+                        <button class="slider-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Текстовый контент -->
+                <div class="history-text">
+                    <p>
+                        Магазин «ДомТекстиля» открыл свои двери в 2000 году как небольшой семейный бизнес.
+                        Начиная с маленького ассортимента постельного белья, мы быстро поняли, что покупатели
+                        ценят качество и натуральные материалы превыше всего. Это осознание стало фундаментом
+                        нашей философии — предлагать только лучший текстиль для дома.
+                    </p>
+                    <p>
+                        За годы работы мы выросли из локального магазина в узнаваемый бренд с сетью
+                        магазинов по всей стране. Но главное осталось неизменным — нашё трепетное отношение
+                        к каждому изделию. Мы лично отбираем поставщиков, проверяем каждую партию товара
+                        и следим за новейшими трендами в текстильной индустрии.
+                    </p>
+                    <p>
+                        Сегодня «ДомТекстиля» — это команда из более чем 280 профессионалов, тысячи
+                        довольных клиентов и ассортимент, включающий всё для создания уюта: от классического
+                        постельного белья до инновационных терморегулирующих одеял. Мы гордимся тем, что
+                        помогаем людям обустраивать их дома с любовью и заботой.
+                    </p>
+                    <p>
+                        Наша миссия проста: каждый человек заслуживает комфортного сна и уютного дома.
+                        И мы работаем каждый день, чтобы сделать это доступным для всех. Спасибо, что
+                        выбираете «ДомТекстиля» — мы ценим ваше доверие и всегда рады видеть вас снова!
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Секция "5 шагов заказа" -->
+        <section class="steps-section">
+            <div class="content-container">
+                <h2 class="steps-title">ЗАКАЗАТЬ У НАС ПРОДУКЦИЮ МОЖНО ВСЕГО ЗА 5 ШАГОВ</h2>
+
+                <div class="steps-grid">
+                    <!-- Шаг 1 -->
+                    <div class="step-card">
+                        <span class="step-number">1 шаг</span>
+                        <h3 class="step-name">ВЫБОР ПРОДУКТА</h3>
+                        <p class="step-description">Выберите нужный текстиль для дома из нашего ассортимента.</p>
+                        <a href="catalog-odeyala.html" class="step-btn">ОТКРЫТЬ КАТАЛОГ</a>
+                    </div>
+
+                    <!-- Шаг 2 -->
+                    <div class="step-card">
+                        <span class="step-number">2 шаг</span>
+                        <h3 class="step-name">ДОБАВИТЬ В КОРЗИНУ</h3>
+                        <p class="step-description">Выбранные вещи добавьте в корзину, чтобы не потерять, что хотели
+                            заказать.</p>
+                    </div>
+
+                    <!-- Шаг 3 -->
+                    <div class="step-card">
+                        <span class="step-number">3 шаг</span>
+                        <h3 class="step-name">ОФОРМЛЕНИЕ ЗАКАЗА</h3>
+                        <p class="step-description">При оформлении заказа укажите свои данные: Имя, телефон и адрес
+                            доставки.</p>
+                    </div>
+
+                    <!-- Шаг 4 -->
+                    <div class="step-card">
+                        <span class="step-number">4 шаг</span>
+                        <h3 class="step-name">ОПЛАТА ЗАКАЗА</h3>
+                        <p class="step-description">Оплатите заказ любым удобным для вас способом.</p>
+                    </div>
+
+                    <!-- Шаг 5 - выделен красным -->
+                    <div class="step-card step-highlight">
+                        <div class="step-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="step-name">ЗАКАЗ ПРИНЯТ</h3>
+                        <p class="step-description">Дождитесь доставки в удобном для вас месте.</p>
+                    </div>
+
+                    <!-- Информационный блок -->
+                    <div class="step-card step-info">
+                        <p class="step-info-text">Мы гарантируем быструю обработку заказа и такую же скоростную доставку
+                            в любое место России. Если у вас возникнут вопросы или проблемы с заказом, наши менеджеры
+                            всегда готовы помочь вам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <!-- Основная часть футера -->
+        <div class="footer-main">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png"></img>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="footer-nav">
+                    <a href="about.html" class="footer-nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="footer-nav-link">Каталог</a>
+                    <a href="#history" class="footer-nav-link">История</a>
+                    <a href="#" class="footer-nav-link">Доставка</a>
+                    <a href="#" class="footer-nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="footer-social">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Телефон -->
+                <div class="footer-phone">
+                    <a href="tel:+78005553535">8 800 555 35 35</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom">
+            <div class="container">
+                <a href="#" class="footer-link">Политика конфиденциальности</a>
+                <span class="footer-copyright">Powered by Nicekitos and Hell.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="JavaScript/index-js.js"></script>
+</body>
+
+</html>

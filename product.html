@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одеяло BAУ - ДомТекстиля</title>
+    <link rel="stylesheet" href="Styles/header-styles.css">
+    <link rel="stylesheet" href="Styles/footer-styles.css">
+    <link rel="stylesheet" href="Styles/product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <!-- Верхняя часть шапки -->
+        <div class="header-top">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png"></img>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="nav-menu">
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="nav-link">Каталог</a>
+                    <a href="index.html#history" class="nav-link">История</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="social-links">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Контакты и вход -->
+                <div class="header-contacts">
+                    <div class="phone-block">
+                        <a href="tel:+78005553535" class="phone-number">8 800 555 35 35</a>
+                        <span class="work-hours">Пн-СБ с 11:00 до 20:00</span>
+                    </div>
+                    <a href="Forms/login-form.html" class="login-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Войти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть шапки (красная) -->
+        <div class="header-bottom">
+            <div class="container">
+                <!-- Кнопка каталога -->
+                <button class="catalog-btn">
+                    <i class="fas fa-th"></i>
+                    <span>Каталог</span>
+                </button>
+
+                <!-- Поиск -->
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск товаров для дома">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Корзина -->
+                <a href="cart.html" class="cart">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">3</span>
+                    </div>
+                    <span class="cart-total">2 330 ₽</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="content-container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="catalog-odeyala.html">Каталог</a>
+                <span class="separator">/</span>
+                <a href="catalog-odeyala.html">Одеяла</a>
+                <span class="separator">/</span>
+                <span class="current">Одеяло BAУ</span>
+            </nav>
+
+            <h1 class="page-title">ИНФОРМАЦИЯ О ТОВАРЕ</h1>
+
+            <!-- Основная информация о товаре -->
+            <div class="product-main">
+                <!-- Галерея фото -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAY">
+                        <button class="gallery-nav prev" onclick="changeImage(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next" onclick="changeImage(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumbnail active" onclick="setImage(0)">
+                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Фото 1">
+                        </div>
+                        <div class="thumbnail" onclick="setImage(1)">
+                            <img src="Pictures/odeyalo_sintepon2.jpg" alt="Фото 2">
+                        </div>
+                        <div class="thumbnail" onclick="setImage(2)">
+                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Фото 3">
+                        </div>
+                        <div class="thumbnail" onclick="setImage(3)">
+                            <img src="Pictures/odeyalo_sintepon2.jpg" alt="Фото 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Информация о товаре -->
+                <div class="product-info">
+                    <h2 class="product-name">Одеяло BAУ</h2>
+                    
+                    <div class="product-price-block">
+                        <span class="product-price">1 000 ₽</span>
+                        <span class="product-old-price">1 500 ₽</span>
+                        <span class="product-discount">-33%</span>
+                    </div>
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">4.5 (12 отзывов)</span>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            В корзину
+                        </button>
+                        <button class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <!-- Характеристики -->
+                    <div class="product-specs">
+                        <h3 class="specs-title">ОСНОВНАЯ ИНФОРМАЦИЯ</h3>
+                        <div class="spec-row">
+                            <span class="spec-label">Цвет</span>
+                            <span class="spec-value">белый, кремовый, бежевый, серый</span>
+                        </div>
+                        
+                        <h3 class="specs-title">Материалы</h3>
+                        <div class="spec-row">
+                            <span class="spec-label">Наполнитель</span>
+                            <span class="spec-value">силиконизированное волокно</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Материал чехла</span>
+                            <span class="spec-value">полиэстер</span>
+                        </div>
+
+                        <h3 class="specs-title">Дополнительная информация</h3>
+                        <div class="spec-row">
+                            <span class="spec-label">Размер одеяла</span>
+                            <span class="spec-value">172х205 см</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Размер постельного белья</span>
+                            <span class="spec-value">2 спальный</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Назначение</span>
+                            <span class="spec-value">Одеяло ВАУ</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Сезонность</span>
+                            <span class="spec-value">всесезонное</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Декоративные элементы</span>
+                            <span class="spec-value">без элементов</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Особенности модели</span>
+                            <span class="spec-value">гипоаллергенные материалы</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Страна производства</span>
+                            <span class="spec-value">Россия</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Комплектация</span>
+                            <span class="spec-value">Одеяло 2 спальное 172*205 — 1шт</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Уход за изделием</span>
+                            <span class="spec-value">Стирка и сушка в машинке до 60°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Описание товара -->
+            <div class="product-description">
+                <h3 class="section-title">Описание</h3>
+                <div class="description-content">
+                    <p>
+                        Одеяло soft touch 2 спальное легкое, плотностью 200 гр/м2. 
+                        Наполнитель после сильной зарядки волокон не сбивается и не сминается, полностью гипоаллергенный, 
+                        устойчив к размножению бактерий, грибков и других вредных микроорганизмов. Одеяло ВАУ обладает прекрасными 
+                        вентилирующими и теплоизоляционными свойствами, при этом сохраняется комфортная температура поверхности изделия, 
+                        что будет комфортно спать в жаркие летние ночи. Ткань чехла микрофибра белоснежного цвета приятна и нравится на ощупь, 
+                        не вызывает раздражения на чувствительной коже. Благодаря специальной обработке изделие практически не впитывает 
+                        влагу и высыхает очень быстро, выдерживает большое количество стирок. Одеяло облегченное всесезонное, достаточно 
+                        теплое в морозы, подходит для дома, дачи, сна. Всё что нужно для дома отдыха, спорта представлено в нашем каталоге, 
+                        просто нажмите на название ДомТекстиля и получите в широком линейке наших товаров для детей и взрослых. 
+                        Мы будем рады вам помочь. Вас в жизни недостаточно времени. Это правда, но пятнадцать минут найдём. С уважением, 
+                        команда ДомТектиля.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Отзывы -->
+            <div class="product-reviews">
+                <h3 class="section-title">Отзывы покупателей</h3>
+                
+                <!-- Статистика отзывов -->
+                <div class="reviews-summary">
+                    <div class="rating-big">
+                        <span class="rating-number">4.5</span>
+                        <div class="stars-big">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="reviews-count">12 отзывов</span>
+                    </div>
+                    <button class="write-review-btn">Написать отзыв</button>
+                </div>
+
+                <!-- Список отзывов -->
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">АК</div>
+                                <div class="reviewer-details">
+                                    <span class="reviewer-name">Анна К.</span>
+                                    <span class="review-date">1 марта 2026</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            Отличное одеяло! Очень мягкое и лёгкое, при этом тёплое. После стирки не потеряло форму, быстро сохнет. Рекомендую!
+                        </p>
+                        <div class="review-images">
+                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Фото отзыва">
+                        </div>
+                        <div class="review-actions">
+                            <button class="review-like">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>5</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">МП</div>
+                                <div class="reviewer-details">
+                                    <span class="reviewer-name">Михаил П.</span>
+                                    <span class="review-date">10 марта 2026</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            Хорошее одеяло за свою цену. Материал приятный на ощупь, швы качественные. Единственный минус — немного тонковато для зимы, но для межсезонья самое то.
+                        </p>
+                        <div class="review-actions">
+                            <button class="review-like">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>3</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">ЕС</div>
+                                <div class="reviewer-details">
+                                    <span class="reviewer-name">Елена С.</span>
+                                    <span class="review-date">5 марта 2026</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            Покупала одеяло для сына в общежитие. Он доволен, говорит очень удобное и не вызывает аллергии. Цена со скидкой приятно удивила!
+                        </p>
+                        <div class="review-actions">
+                            <button class="review-like">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>8</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="show-more-reviews">Показать все отзывы</button>
+            </div>
+            <!-- Популярные товары (заглушка) -->
+            <section class="popular-section">
+                <h2 class="section-title">С этим товаром смотрят</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ">
+                        </div>
+                        <h3 class="product-name">Одеяло BAУ</h3>
+                        <div class="product-price">1 000 ₽</div>
+                        <a href="product.html" class="product-btn">Подробнее</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Pictures/odeyalo_sintepon2.jpg" alt="Одеяло BAУ">
+                        </div>
+                        <h3 class="product-name">Одеяло BAУ Лёгкое</h3>
+                        <div class="product-price">330 ₽</div>
+                        <a href="product.html" class="product-btn">Подробнее</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ">
+                        </div>
+                        <h3 class="product-name">Одеяло BAУ Премиум</h3>
+                        <div class="product-price">1 500 ₽</div>
+                        <a href="product.html" class="product-btn">Подробнее</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- Основная часть футера -->
+        <div class="footer-main">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png" alt="ДомТекстиля">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="footer-nav">
+                    <a href="about.html" class="footer-nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="footer-nav-link">Каталог</a>
+                    <a href="index.html#history" class="footer-nav-link">История</a>
+                    <a href="#" class="footer-nav-link">Доставка</a>
+                    <a href="#" class="footer-nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="footer-social">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Телефон -->
+                <div class="footer-phone">
+                    <a href="tel:+78005553535">8 800 555 35 35</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom">
+            <div class="container">
+                <a href="#" class="footer-link">Политика конфиденциальности</a>
+                <span class="footer-copyright">Powered by Nicekitos and Hell.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/product-js.js"></script>
+</body>
+</html>

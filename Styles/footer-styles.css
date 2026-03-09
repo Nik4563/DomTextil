@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #4a4a4a;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Основная часть футера */
+.footer-main {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-main .container {
+    gap: 30px;
+}
+
+/* Логотип */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo .logo-icon {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-logo .logo-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Навигация */
+.footer-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+
+.footer-nav-link:hover {
+    opacity: 0.7;
+}
+
+/* Социальные сети */
+.footer-social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-social .social-link {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-social .social-link:hover {
+    opacity: 0.8;
+}
+
+.footer-social .social-link.vk { background: #4a76a8; }
+.footer-social .social-link.telegram { background: #0088cc; }
+.footer-social .social-link.whatsapp { background: #25d366; }
+.footer-social .social-link.viber { background: #665cac; }
+.footer-social .social-link.youtube { background: #ff0000; }
+
+/* Телефон */
+.footer-phone a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.footer-phone a:hover {
+    opacity: 0.7;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+    background: #3a3a3a;
+    padding: 15px 0;
+}
+
+.footer-bottom .container {
+    justify-content: space-between;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .footer-main .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
