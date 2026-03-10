@@ -119,9 +119,9 @@
                 <a href="cart.html" class="cart">
                     <div class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge">3</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
                     </div>
-                    <span class="cart-total">0 ₽</span>
+                    <span class="cart-total" id="cartTotal">0 ₽</span>
                 </a>
             </div>
         </div>
@@ -152,7 +152,7 @@
                     <i class="fas fa-bath"></i>
                     <span>Полотенца</span>
                 </a>
-                
+
             </div>
 
             <!-- Секция История -->
@@ -178,34 +178,166 @@
                     </div>
                 </div>
 
-                <!-- Текстовый контент -->
-                <div class="history-text">
-                    <p>
-                        Магазин «ДомТекстиля» открыл свои двери в 2000 году как небольшой семейный бизнес.
-                        Начиная с маленького ассортимента постельного белья, мы быстро поняли, что покупатели
-                        ценят качество и натуральные материалы превыше всего. Это осознание стало фундаментом
-                        нашей философии — предлагать только лучший текстиль для дома.
-                    </p>
-                    <p>
-                        За годы работы мы выросли из локального магазина в узнаваемый бренд с сетью
-                        магазинов по всей стране. Но главное осталось неизменным — нашё трепетное отношение
-                        к каждому изделию. Мы лично отбираем поставщиков, проверяем каждую партию товара
-                        и следим за новейшими трендами в текстильной индустрии.
-                    </p>
-                    <p>
-                        Сегодня «ДомТекстиля» — это команда из более чем 280 профессионалов, тысячи
-                        довольных клиентов и ассортимент, включающий всё для создания уюта: от классического
-                        постельного белья до инновационных терморегулирующих одеял. Мы гордимся тем, что
-                        помогаем людям обустраивать их дома с любовью и заботой.
-                    </p>
-                    <p>
-                        Наша миссия проста: каждый человек заслуживает комфортного сна и уютного дома.
-                        И мы работаем каждый день, чтобы сделать это доступным для всех. Спасибо, что
-                        выбираете «ДомТекстиля» — мы ценим ваше доверие и всегда рады видеть вас снова!
-                    </p>
+                <!-- Сетка картинок истории -->
+                <div class="history-grid">
+                    <div class="history-card">
+                        <div class="history-card-img">
+                            <img src="Pictures/NaZavode.jpg" alt="Начало пути">
+                        </div>
+                        <p class="history-card-text">Магазин «ДомТекстиля» открыл свои двери в 2000 году как небольшой семейный бизнес. Начиная с маленького ассортимента постельного белья, мы быстро поняли, что покупатели ценят качество и натуральные материалы превыше всего. Это осознание стало фундаментом нашей философии — предлагать только лучший текстиль для дома.</p>
+                    </div>
+                    <div class="history-card">
+                        <div class="history-card-img">
+                            <img src="Pictures/sklad.jpg" alt="Рост компании">
+                        </div>
+                        <p class="history-card-text">За годы работы мы выросли из локального магазина в узнаваемый бренд с сетью магазинов по всей стране. Но главное осталось неизменным — наше трепетное отношение к каждому изделию. Мы лично отбираем поставщиков, проверяем каждую партию товара и следим за новейшими трендами в текстильной индустрии.</p>
+                    </div>
+                    <div class="history-card">
+                        <div class="history-card-img">
+                            <img src="Pictures/NaZavode2.jpg" alt="Наша команда">
+                        </div>
+                        <p class="history-card-text">Сегодня «ДомТекстиля» — это команда из более чем 280 профессионалов, тысячи довольных клиентов и ассортимент, включающий всё для создания уюта: от классического постельного белья до инновационных терморегулирующих одеял. Мы гордимся тем, что помогаем людям обустраивать их дома с любовью и заботой.</p>
+                    </div>
+                    <div class="history-card">
+                        <div class="history-card-img">
+                            <img src="Pictures/shveika.jpg" alt="Наша миссия">
+                        </div>
+                        <p class="history-card-text">Наша миссия проста: каждый человек заслуживает комфортного сна и уютного дома. И мы работаем каждый день, чтобы сделать это доступным для всех. Спасибо, что выбираете «ДомТекстиля» — мы ценим ваше доверие и всегда рады видеть вас снова!</p>
+                    </div>
                 </div>
             </section>
         </div>
+
+        <!-- Секция "Популярные товары" -->
+        <section class="popular-section">
+            <div class="content-container">
+                <h2 class="section-title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+                <div class="popular-grid">
+                    <div class="product-card">
+                        <a href="product.html" class="product-card-link">
+                            <div class="product-card-img">
+                                <span class="popular-badge">Хит</span>
+                                <img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">Одеяло BAУ</h3>
+                                <p class="product-card-desc">Зимнее шелкопряда одеяло BAУ предназначено для использования на односпальной кровати.</p>
+                                <div class="product-card-price-row">
+                                    <span class="product-card-price">1 000 ₽</span>
+                                    <span class="product-card-old-price">1 500 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                    </div>
+                    <div class="product-card">
+                        <a href="product.html" class="product-card-link">
+                            <div class="product-card-img">
+                                <span class="popular-badge">Хит</span>
+                                <img src="Pictures/odeyalo_sintepon2.jpg" alt="Одеяло BAУ">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">Одеяло BAУ</h3>
+                                <p class="product-card-desc">Зимнее шелкопряда одеяло BAУ предназначено для использования на односпальной кровати.</p>
+                                <div class="product-card-price-row">
+                                    <span class="product-card-price">430 ₽</span>
+                                    <span class="product-card-old-price">550 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                    </div>
+                    <div class="product-card">
+                        <a href="product.html" class="product-card-link">
+                            <div class="product-card-img">
+                                <span class="popular-badge">Хит</span>
+                                <img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">Одеяло BAУ</h3>
+                                <p class="product-card-desc">Зимнее шелкопряда одеяло BAУ предназначено для использования на односпальной кровати.</p>
+                                <div class="product-card-price-row">
+                                    <span class="product-card-price">380 ₽</span>
+                                    <span class="product-card-old-price">480 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                    </div>
+                    <div class="product-card">
+                        <a href="product.html" class="product-card-link">
+                            <div class="product-card-img">
+                                <span class="popular-badge">Хит</span>
+                                <img src="Pictures/odeyalo_sintepon2.jpg" alt="Одеяло BAУ">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">Одеяло BAУ</h3>
+                                <p class="product-card-desc">Зимнее шелкопряда одеяло BAУ предназначено для использования на односпальной кровати.</p>
+                                <div class="product-card-price-row">
+                                    <span class="product-card-price">430 ₽</span>
+                                    <span class="product-card-old-price">520 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                    </div>
+                    <div class="product-card">
+                        <a href="product.html" class="product-card-link">
+                            <div class="product-card-img">
+                                <span class="popular-badge">Хит</span>
+                                <img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">Одеяло BAУ</h3>
+                                <p class="product-card-desc">Зимнее шелкопряда одеяло BAУ предназначено для использования на односпальной кровати.</p>
+                                <div class="product-card-price-row">
+                                    <span class="product-card-price">430 ₽</span>
+                                    <span class="product-card-old-price">450 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Почему стоит покупать у нас" -->
+        <section class="why-us-section">
+            <div class="content-container">
+                <h2 class="section-title">ПОЧЕМУ СТОИТ ПОКУПАТЬ У НАС</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="why-us-title">КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h3>
+                        <p class="why-us-text">Материалы, которые мы предлагаем нашим клиентам, отличаются высоким качеством и долговечностью.</p>
+                    </div>
+                    <div class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-truck-fast"></i>
+                        </div>
+                        <h3 class="why-us-title">БЫСТРАЯ ДОСТАВКА</h3>
+                        <p class="why-us-text">Быстро доставим вещи в удобное для вас время и место.</p>
+                    </div>
+                    <div class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="why-us-title">ДЕМОКРАТИЧНЫЕ ЦЕНЫ</h3>
+                        <p class="why-us-text">Гарантируем демократичные цены.</p>
+                    </div>
+                    <div class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="why-us-title">РАЗНООБРАЗНЫЙ АССОРТИМЕНТ</h3>
+                        <p class="why-us-text">Наш ассортимент постоянно обновляется, чтобы удовлетворить потребности наших клиентов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Секция "5 шагов заказа" -->
         <section class="steps-section">
@@ -317,8 +449,10 @@
     </footer>
 </body>
 
+<script src="JavaScript/cart-js.js"></script>
 <script src="JavaScript/index-js.js"></script>
 <script src="JavaScript/header-js.js"></script>
+<script src="JavaScript/product-js.js"></script>
 </body>
 
 </html>

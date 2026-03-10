@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Одеяло BAУ - ДомТекстиля</title>
+    <link rel="icon" href="Pictures/logotip (2).png">
     <link rel="stylesheet" href="Styles/header-styles.css">
     <link rel="stylesheet" href="Styles/footer-styles.css">
     <link rel="stylesheet" href="Styles/product-styles.css">
@@ -117,9 +118,9 @@
                 <a href="cart.html" class="cart">
                     <div class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge">3</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
                     </div>
-                    <span class="cart-total">0 ₽</span>
+                    <span class="cart-total" id="cartTotal">0 ₽</span>
                 </a>
             </div>
         </div>
@@ -481,6 +482,7 @@
         </div>
     </footer>
 
+    <script src="JavaScript/cart-js.js"></script>
     <script src="JavaScript/product-js.js"></script>
     <script src="JavaScript/header-js.js"></script>
 </body>

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина - ДомТекстиля</title>
+    <link rel="icon" href="Pictures/logotip (2).png">
     <link rel="stylesheet" href="Styles/header-styles.css">
     <link rel="stylesheet" href="Styles/footer-styles.css">
     <link rel="stylesheet" href="Styles/cart-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <!-- HEADER -->
     <header class="header">
-        <!-- Верхняя часть шапки -->
         <div class="header-top">
             <div class="container">
-                <!-- Логотип -->
                 <a href="index.html">
                     <div class="logo">
                         <div class="logo-icon">
-                            <img class="logo-tip" src="Pictures/logotip (2).png"></img>
+                            <img class="logo-tip" src="Pictures/logotip (2).png">
                         </div>
                         <div class="logo-text">
                             <span class="logo-title">ДомТекстиля</span>
@@ -29,8 +26,6 @@
                         </div>
                     </div>
                 </a>
-
-                <!-- Навигация -->
                 <nav class="nav-menu">
                     <a href="about.html" class="nav-link">О нас</a>
                     <a href="catalog-odeyala.html" class="nav-link">Каталог</a>
@@ -38,8 +33,6 @@
                     <a href="#" class="nav-link">Доставка</a>
                     <a href="contacts.html" class="nav-link">Контакты</a>
                 </nav>
-
-                <!-- Социальные сети -->
                 <div class="social-links">
                     <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
                     <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
@@ -47,8 +40,6 @@
                     <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
                     <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
                 </div>
-
-                <!-- Контакты и вход -->
                 <div class="header-contacts">
                     <div class="phone-block">
                         <a href="tel:+78005553535" class="phone-number">8 800 555 35 35</a>
@@ -61,17 +52,13 @@
                 </div>
             </div>
         </div>
-
-        <!-- Нижняя часть шапки (красная) -->
         <div class="header-bottom">
             <div class="container">
-                <!-- Кнопка каталога -->
                 <div class="catalog-dropdown">
                     <button class="catalog-btn" id="catalogBtn">
                         <i class="fas fa-th"></i>
                         <span>Каталог</span>
                     </button>
-
                     <div class="catalog-menu" id="catalogMenu">
                         <ul class="catalog-categories">
                             <li class="catalog-category">
@@ -105,23 +92,18 @@
                                 </a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
-
-                <!-- Поиск -->
                 <div class="search-box">
                     <input type="text" placeholder="Поиск товаров для дома">
                     <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
-
-                <!-- Корзина -->
                 <a href="cart.html" class="cart">
                     <div class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge">3</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
                     </div>
-                    <span class="cart-total">0 ₽</span>
+                    <span class="cart-total" id="cartTotal">0 ₽</span>
                 </a>
             </div>
         </div>
@@ -136,93 +118,66 @@
                 <span class="current">Корзина</span>
             </nav>
 
-            <!-- Заголовок страницы -->
             <h1 class="page-title">КОРЗИНА</h1>
 
-            <!-- Действия с корзиной -->
-            <div class="cart-actions">
-                <label class="select-all">
-                    <input type="checkbox" id="selectAll" checked>
-                    <span class="checkmark"></span>
-                    <span class="select-all-text">ВЫБРАТЬ ВСЁ</span>
-                </label>
+            <!-- Пустая корзина -->
+            <div class="empty-cart" id="emptyCart" style="display: none;">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h2 class="empty-cart-title">Ваша корзина пуста</h2>
+                <p class="empty-cart-text">Добавьте товары из каталога, чтобы оформить заказ</p>
+                <a href="catalog-odeyala.html" class="empty-cart-btn">Перейти в каталог</a>
             </div>
 
-            <!-- Список товаров -->
-            <div class="cart-items">
-                <!-- Товар 1 -->
-                <div class="cart-item">
-                    <label class="item-checkbox">
-                        <input type="checkbox" class="item-check" checked>
+            <!-- Содержимое корзины -->
+            <div class="cart-content" id="cartContent">
+                <!-- Действия с корзиной -->
+                <div class="cart-actions">
+                    <label class="select-all">
+                        <input type="checkbox" id="selectAll" checked>
                         <span class="checkmark"></span>
+                        <span class="select-all-text">ВЫБРАТЬ ВСЁ</span>
                     </label>
-                    <div class="item-image">
-                        <a href="product.html"><img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ"></a>
-                    </div>
-                    <div class="item-info">
-                        <a href="product.html">
-                            <h3 class="item-name">Одеяло BAУ</h3>
-                            <div class="item-price-block">
-                                <span class="item-price">1 000 ₽</span>
-                                <span class="item-old-price">1 500 ₽</span>
-                            </div>
-                            <p class="item-description">Зимнее шелковистое одеяло BAУ предназначено для использования на
-                                односпальной кровати.</p>
-                        </a>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                        <span class="qty-value">2</span>
-                        <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                    </div>
-                    <button class="buy-btn">КУПИТЬ</button>
+                    <button class="clear-cart-btn" id="clearCart">
+                        <i class="fas fa-trash-alt"></i>
+                        Очистить корзину
+                    </button>
                 </div>
 
-                <!-- Товар 2 -->
-                <div class="cart-item">
-                    <label class="item-checkbox">
-                        <input type="checkbox" class="item-check" checked>
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="item-image">
-                        <a href="product.html"><img src="Pictures/odeyalo_sintepon.jpg" alt="Одеяло BAУ"></a>
-                    </div>
-                    <div class="item-info">
-                        <a href="product.html">
-                            <h3 class="item-name">Одеяло BAУ</h3>
-                            <div class="item-price-block">
-                                <span class="item-price">330 ₽</span>
-                                <span class="item-old-price">450 ₽</span>
-                            </div>
-                            <p class="item-description">Зимнее шелковистое одеяло BAУ предназначено для использования на
-                                односпальной кровати.</p>
-                        </a>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                        <span class="qty-value">1</span>
-                        <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                    </div>
-                    <button class="buy-btn">КУПИТЬ</button>
+                <!-- Список товаров -->
+                <div class="cart-items" id="cartItems">
                 </div>
-            </div>
 
-            <!-- Итого и кнопка оформления -->
-            <div class="cart-footer">
-                <a href="checkout.html" class="checkout-btn">
-                    К ОФОРМЛЕНИЮ
-                    <span class="checkout-summary">2 шт. 1 330 ₽</span>
-                </a>
+                <!-- Итого и кнопка оформления -->
+                <div class="cart-footer">
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Товары (<span id="totalItems">0</span>)</span>
+                            <span id="subtotal">0 ₽</span>
+                        </div>
+                        <div class="summary-row discount" id="discountRow" style="display: none;">
+                            <span>Скидка</span>
+                            <span id="discountAmount">-0 ₽</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Итого</span>
+                            <span id="finalTotal">0 ₽</span>
+                        </div>
+                    </div>
+                    <a href="checkout.html" class="checkout-btn" id="checkoutBtn">
+                        К ОФОРМЛЕНИЮ
+                        <span class="checkout-summary" id="checkoutSummary">0 шт. 0 ₽</span>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <!-- Основная часть футера -->
         <div class="footer-main">
             <div class="container">
-                <!-- Логотип -->
                 <a href="index.html">
                     <div class="logo">
                         <div class="logo-icon">
@@ -234,8 +189,6 @@
                         </div>
                     </div>
                 </a>
-
-                <!-- Навигация -->
                 <nav class="footer-nav">
                     <a href="about.html" class="footer-nav-link">О нас</a>
                     <a href="catalog-odeyala.html" class="footer-nav-link">Каталог</a>
@@ -243,8 +196,6 @@
                     <a href="#" class="footer-nav-link">Доставка</a>
                     <a href="contacts.html" class="footer-nav-link">Контакты</a>
                 </nav>
-
-                <!-- Социальные сети -->
                 <div class="footer-social">
                     <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
                     <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
@@ -252,15 +203,11 @@
                     <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
                     <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
                 </div>
-
-                <!-- Телефон -->
                 <div class="footer-phone">
                     <a href="tel:+78005553535">8 800 555 35 35</a>
                 </div>
             </div>
         </div>
-
-        <!-- Нижняя часть футера -->
         <div class="footer-bottom">
             <div class="container">
                 <a href="Documents/Privacy.docx" class="footer-link" download>Политика конфиденциальности</a>
@@ -270,7 +217,7 @@
     </footer>
 
     <script src="JavaScript/cart-js.js"></script>
+    <script src="JavaScript/cart-js.js"></script>
     <script src="JavaScript/header-js.js"></script>
 </body>
-
 </html>
