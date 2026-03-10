@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ДомТекстиля</title>
+    <link rel="stylesheet" href="Styles/header-styles.css">
+    <link rel="stylesheet" href="Styles/footer-styles.css">
+    <link rel="stylesheet" href="Styles/contacts-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <!-- Верхняя часть шапки -->
+        <div class="header-top">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png"></img>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="nav-menu">
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="nav-link">Каталог</a>
+                    <a href="index.html#history" class="nav-link">История</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="social-links">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Контакты и вход -->
+                <div class="header-contacts">
+                    <div class="phone-block">
+                        <a href="tel:+78005553535" class="phone-number">8 800 555 35 35</a>
+                        <span class="work-hours">Пн-СБ с 11:00 до 20:00</span>
+                    </div>
+                    <a href="Forms/login-form.html" class="login-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Войти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть шапки (красная) -->
+        <div class="header-bottom">
+            <div class="container">
+                <!-- Кнопка каталога -->
+                <div class="catalog-dropdown">
+                    <button class="catalog-btn" id="catalogBtn">
+                        <i class="fas fa-th"></i>
+                        <span>Каталог</span>
+                    </button>
+
+                    <div class="catalog-menu" id="catalogMenu">
+                        <ul class="catalog-categories">
+                            <li class="catalog-category">
+                                <a href="catalog-odeyala.html" class="catalog-link">
+                                    <i class="fas fa-mattress-pillow"></i>
+                                    <span>Одеяла</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-bed"></i>
+                                    <span>Подушки</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>Комплекты постельного белья</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-couch"></i>
+                                    <span>Пледы и покрывала</span>
+                                </a>
+                            </li>
+                            <li class="catalog-category">
+                                <a href="" class="catalog-link">
+                                    <i class="fas fa-bath"></i>
+                                    <span>Полотенца</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Поиск -->
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск товаров для дома">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Корзина -->
+                <a href="cart.html" class="cart">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">3</span>
+                    </div>
+                    <span class="cart-total">0 ₽</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="content-container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <span class="current">Контакты</span>
+            </nav>
+
+            <!-- Заголовок страницы -->
+            <h1 class="page-title">КОНТАКТЫ</h1>
+
+            <!-- Секция с картой и контактами -->
+            <div class="contacts-section">
+                <!-- Карта -->
+                <div class="map-container">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7218c68d24ae55893c0e110754e0f4bfdf788e91ecc1debe00da6cdf0445642&amp;source=constructor" 
+                    width="500" height="400" 
+                    frameborder="0"></iframe>
+                </div>
+
+                <!-- Контактная информация -->
+                <div class="contacts-info">
+                    <h2 class="contacts-subtitle">Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Адрес</span>
+                            <span class="contact-value">г. Иваново, ул. Станкостроителей, 5Б</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Телефон</span>
+                            <a href="tel:+78005553535" class="contact-value link">8 800 555 35 35</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@domtextilya.ru" class="contact-value link">info@domtextilya.ru</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Режим работы</span>
+                            <span class="contact-value">Пн-Сб: 11:00 - 20:00<br>Вс: выходной</span>
+                        </div>
+                    </div>
+
+                    <!-- Социальные сети -->
+                    <div class="contacts-social">
+                        <span class="social-label">Мы в соцсетях:</span>
+                        <div class="social-links-row">
+                            <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <section class="feedback-section">
+                <h2 class="section-title">ОБРАТНАЯ СВЯЗЬ</h2>
+                <p class="section-description">Есть вопросы? Напишите нам, и мы ответим в ближайшее время!</p>
+                
+                <form class="feedback-form" id="feedbackForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема обращения</label>
+                            <select id="subject" name="subject">
+                                <option value="question">Вопрос о товаре</option>
+                                <option value="order">Оформление заказа</option>
+                                <option value="delivery">Доставка</option>
+                                <option value="return">Возврат</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Сообщение *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required checked>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я согласен с <a href="#">политикой конфиденциальности</a> и обработкой персональных данных *</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить сообщение
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- Основная часть футера -->
+        <div class="footer-main">
+            <div class="container">
+                <!-- Логотип -->
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img class="logo-tip" src="Pictures/logotip (2).png" alt="ДомТекстиля">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ДомТекстиля</span>
+                            <span class="logo-subtitle">Магазин по продаже текстиля</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="footer-nav">
+                    <a href="about.html" class="footer-nav-link">О нас</a>
+                    <a href="catalog-odeyala.html" class="footer-nav-link">Каталог</a>
+                    <a href="index.html#history" class="footer-nav-link">История</a>
+                    <a href="#" class="footer-nav-link">Доставка</a>
+                    <a href="contacts.html" class="footer-nav-link">Контакты</a>
+                </nav>
+
+                <!-- Социальные сети -->
+                <div class="footer-social">
+                    <a href="#" class="social-link vk"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link viber"><i class="fab fa-viber"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Телефон -->
+                <div class="footer-phone">
+                    <a href="tel:+78005553535">8 800 555 35 35</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom">
+            <div class="container">
+                <a href="#" class="footer-link">Политика конфиденциальности</a>
+                <span class="footer-copyright">Powered by Nicekitos and Hell.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/header-js.js"></script>
+    <script src="JavaScript/contacts-js.js"></script>
+</body>
+</html>
