@@ -382,27 +382,92 @@ a:has(.logo) {
 }
 
 /* Адаптивность */
+/* Планшет */
 @media (max-width: 992px) {
+    body {
+        padding-top: 100px;
+    }
+
     .nav-menu {
         display: none;
     }
-    
+
     .social-links {
         display: none;
     }
+
+    .logo-tip {
+        width: 90px;
+    }
 }
 
+/* Большие телефоны */
 @media (max-width: 768px) {
+    body {
+        padding-top: 90px;
+    }
+
     .header-top .container {
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px;
+        justify-content: space-between;
     }
-    
+
     .phone-block {
         display: none;
     }
-    
+
+    .header-contacts {
+        gap: 12px;
+    }
+
     .search-box {
         max-width: none;
+        order: 3;
+        width: 100%;
+    }
+
+    .logo-tip {
+        width: 80px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+    body {
+        padding-top: 85px;
+    }
+
+    .header-top {
+        padding: 10px 0;
+    }
+
+    .header-bottom {
+        padding: 8px 0;
+    }
+
+    .header-bottom .container {
+        gap: 10px;
+    }
+
+    .catalog-btn span {
+        display: none; /* только иконка */
+    }
+
+    .catalog-btn {
+        padding: 8px 10px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .cart-total {
+        display: none; /* только иконка с бейджем */
+    }
+
+    .login-btn span {
+        display: none; /* только иконка */
     }
 }

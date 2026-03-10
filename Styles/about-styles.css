@@ -78,8 +78,7 @@
 }
 
 .banner-content {
-    flex: 1;
-    padding: 40px 50px;
+    display: none;
 }
 
 .banner-title {
@@ -92,7 +91,7 @@
 }
 
 .banner-image {
-    flex: 1;
+    width: 100%;
     height: 350px;
     overflow: hidden;
 }
@@ -307,64 +306,129 @@
 }
 
 /* Адаптивность */
-@media (max-width: 992px) {
-    .gallery-main { height: 400px; }
-    .gallery-title { font-size: 20px; }
-}
-
-@media (max-width: 768px) {
-    .gallery-main { height: 300px; }
-    .gallery-nav { width: 40px; height: 40px; }
-    .gallery-thumb { width: 80px; height: 60px; }
-}
-
-/* Адаптивность */
-@media (max-width: 992px) {
-    .banner-slide {
-        flex-direction: column;
-        min-height: auto;
-    }
-    
-    .banner-content {
-        padding: 30px;
-        text-align: center;
-    }
-    
-    .banner-title {
-        font-size: 32px;
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 250px;
-    }
-    
-    .slider-nav {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 15px;
-    }
-}
-
 @media (max-width: 768px) {
     .main-content {
         padding: 20px 0 40px;
+        padding-top: 40px;
     }
-    
+
     .page-title {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 20px;
     }
-    
-    .banner-title {
-        font-size: 24px;
+
+    /* Баннер — уменьшаем высоту */
+    .banner-slide {
+        min-height: 200px;
     }
-    
-    .banner-content {
-        padding: 20px;
+
+    .banner-slide .banner-image {
+        width: 100%;
+        height: 250px;
     }
-    
+
+    /* Кнопки слайдера — меньше */
+    .slider-nav {
+        bottom: 10px;
+        gap: 8px;
+    }
+
+    .slider-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        border-width: 1px;
+    }
+
+    /* Текст */
     .about-text p {
         font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    /* Галерея производства */
+    .gallery-section {
+        padding: 30px 0;
+        margin-top: 25px;
+    }
+
+    .gallery-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-main {
+        height: 280px;
+    }
+
+    .gallery-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .gallery-nav.prev { left: 10px; }
+    .gallery-nav.next { right: 10px; }
+
+    .gallery-thumb {
+        width: 80px;
+        height: 55px;
+    }
+
+    .gallery-description {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    /* Баннер совсем компактный */
+    .banner-slide {
+        min-height: 160px;
+    }
+
+    .banner-slide .banner-image {
+        height: 160px;
+    }
+
+    .slider-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+    }
+
+    .slider-nav {
+        bottom: 8px;
+        gap: 6px;
+    }
+
+    /* Галерея производства */
+    .gallery-main {
+        height: 220px;
+    }
+
+    .gallery-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .gallery-thumb {
+        width: 65px;
+        height: 45px;
+    }
+
+    .gallery-dots .gallery-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .about-text p {
+        font-size: 13px;
     }
 }

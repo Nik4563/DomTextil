@@ -610,61 +610,221 @@
 @media (max-width: 992px) {
     .product-main {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
     }
-    
+
     .product-gallery {
         flex: none;
         width: 100%;
     }
-    
+
     .main-image {
         height: 350px;
+    }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-price {
+        font-size: 28px;
+    }
+
+    /* Популярные товары */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
     }
 }
 
 @media (max-width: 768px) {
     .main-content {
         padding: 20px 0 40px;
+        padding-top: 40px;
     }
-    
+
     .page-title {
         font-size: 20px;
+        margin-bottom: 20px;
     }
-    
-    .product-name {
-        font-size: 22px;
-    }
-    
-    .product-price {
-        font-size: 26px;
-    }
-    
+
+    /* Галерея */
     .main-image {
         height: 280px;
     }
-    
+
     .thumbnail {
         width: 60px;
         height: 60px;
     }
-    
+
+    .thumbnails {
+        gap: 8px;
+    }
+
+    /* Информация о товаре */
+    .product-name {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .product-old-price {
+        font-size: 16px;
+    }
+
+    /* Кнопки действий */
     .product-actions {
         flex-wrap: wrap;
+        gap: 10px;
     }
-    
+
     .add-to-cart-btn {
         flex: 1 1 auto;
+        padding: 12px 20px;
+        font-size: 14px;
     }
-    
+
+    .favorite-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .quantity-selector {
+        width: auto;
+    justify-content: flex-start;
+    }
+
+    /* Характеристики */
+    .product-specs {
+        padding: 18px;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 13px;
+    }
+
+    /* Отзывы */
+    .product-reviews {
+        padding: 20px;
+    }
+
     .reviews-summary {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         align-items: flex-start;
     }
-    
+
+    .rating-number {
+        font-size: 36px;
+    }
+
     .review-header {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .review-item {
+        padding: 15px;
+    }
+
+    /* Популярные товары */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card .product-name {
+        font-size: 14px;
+        padding: 10px 12px 4px;
+    }
+
+    .product-card .product-price {
+        font-size: 16px;
+        padding: 0 12px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Галерея */
+    .main-image {
+        height: 240px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Информация */
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-image {
+        height: 130px;
+    }
+
+    .product-price {
+        font-size: 22px;
+    }
+
+    .product-discount {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+    /* Кнопки */
+    .add-to-cart-btn {
+        font-size: 13px;
+        padding: 11px 15px;
+    }
+
+    /* Характеристики */
+    .spec-value {
+        max-width: 55%;
+    }
+
+    /* Отзывы */
+    .review-images img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .reviewer-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    /* Популярные товары */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .product-card .product-name {
+        font-size: 12px;
+        padding: 8px 10px 3px;
+    }
+
+    .product-card .product-price {
+        font-size: 14px;
+        padding: 0 10px 8px;
+    }
+
+    .product-btn {
+        margin: 0 10px 10px;
+        padding: 9px;
+        font-size: 12px;
     }
 }

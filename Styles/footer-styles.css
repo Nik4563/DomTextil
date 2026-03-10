@@ -159,22 +159,48 @@ body {
         order: 3;
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .footer-main .container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 15px;
     }
 
     .footer-nav {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-nav-link {
+        font-size: 12px;
     }
 
     .footer-bottom .container {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        padding: 20px 0;
+    }
+
+    .footer-social .social-link {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .footer-phone a {
+        font-size: 16px;
     }
 }

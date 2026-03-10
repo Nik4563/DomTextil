@@ -247,6 +247,7 @@
 @media (max-width: 992px) {
     .catalog-layout {
         flex-direction: column;
+        gap: 20px;
     }
 
     .catalog-sidebar {
@@ -256,7 +257,8 @@
     .category-menu {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
+        padding: 0;
     }
 
     .category-item {
@@ -264,21 +266,145 @@
     }
 
     .category-link {
-        padding: 8px 15px;
+        padding: 8px 14px;
         border: 1px solid #eee;
+        border-radius: 20px;
+        font-size: 13px;
+    }
+
+    /* Убираем обе стрелки — иконку и псевдоэлемент из header-styles */
+    .category-arrow {
+        display: none !important;
+    }
+
+    .category-link::after {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-content {
+        padding-top: 40px;
+    }
+
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .category-title {
+        font-size: 18px;
+        margin-bottom: 15px;
     }
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-name {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .product-description {
+        font-size: 11px;
+        height: 44px;
+    }
+
+    .product-price {
+        font-size: 15px;
+    }
+
+    .product-old-price {
+        font-size: 12px;
+    }
+
+    .add-to-cart-btn {
+        padding: 10px;
+        font-size: 12px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+
+    /* Горизонтальный скролл для категорий */
+    .catalog-sidebar {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .category-menu {
+        flex-wrap: nowrap;
+        width: max-content;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+        gap: 8px;
+    }
+
+    .category-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-item {
+        flex-shrink: 0;
+    }
+
+    .category-link {
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
     .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .product-image {
+        height: 120px;
+    }
+
+    .product-info {
+        padding: 8px;
+    }
+
+    .product-name {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .product-description {
+        display: none;
+    }
+
+    .product-price-row {
+        margin-bottom: 8px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .product-old-price {
+        font-size: 11px;
+    }
+
+    .add-to-cart-btn {
+        padding: 9px;
+        font-size: 11px;
     }
 
     .page-title {
-        font-size: 24px;
+        font-size: 20px;
     }
 }

@@ -461,90 +461,193 @@
 
 /* Адаптивность */
 @media (max-width: 992px) {
-    .cart-item {
-        flex-wrap: wrap;
-        gap: 15px;
+    /* Карточка остаётся горизонтальной, просто убираем описание */
+    .item-description {
+        display: none;
     }
-    
-    .item-info {
-        flex: 1;
-        min-width: 200px;
-    }
-    
-    .item-quantity {
-        order: 4;
-        margin-left: 42px;
-    }
-    
+
     .item-total {
-        order: 5;
-        margin-left: auto;
+        min-width: 70px;
     }
-    
-    .remove-btn {
-        order: 6;
-    }
-    
-    /* На планшете кнопка под суммой */
+
+    /* Футер — вертикально */
     .cart-footer {
         flex-direction: column;
         align-items: stretch;
         gap: 20px;
     }
-    
+
     .cart-summary {
         min-width: auto;
     }
-    
+
     .checkout-btn {
         width: 100%;
         padding: 16px;
+        text-align: center;
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
     .main-content {
         padding: 20px 0 40px;
+        padding-top: 40px;
     }
-    
+
     .page-title {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 22px;
+        margin-bottom: 15px;
     }
-    
-    .cart-actions {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
-    
+
+    /* Карточка — горизонтальная, компактная */
     .cart-item {
-        padding: 15px;
+        gap: 10px;
+        padding: 12px;
     }
-    
+
     .item-image {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
-    
+
     .item-name {
-        font-size: 15px;
+        font-size: 13px;
+        margin-bottom: 4px;
     }
-    
+
     .item-price {
-        font-size: 16px;
+        font-size: 14px;
     }
-    
-    .item-description {
+
+    .item-old-price {
+        font-size: 11px;
+    }
+
+    .item-total {
+        font-size: 14px;
+        min-width: 60px;
+    }
+
+    .qty-btn {
+        width: 26px;
+        height: 26px;
+    }
+
+    .qty-value {
+        font-size: 13px;
+    }
+
+    .item-quantity {
+        gap: 6px;
+    }
+
+    .remove-btn {
+        width: 28px;
+        height: 28px;
         font-size: 12px;
     }
-    
-    .cart-footer {
-        padding-top: 15px;
+
+    /* Итого */
+    .cart-summary {
+        padding: 15px;
     }
-    
+
+    .summary-row.total {
+        font-size: 16px;
+    }
+
     .checkout-btn {
         padding: 14px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .cart-item {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .item-checkbox .checkmark {
+        width: 18px;
+        height: 18px;
+    }
+
+    .item-image {
+        width: 55px;
+        height: 55px;
+        border-radius: 6px;
+    }
+
+    /* Цена и название компактнее */
+    .item-name {
+        font-size: 11px;
+        margin-bottom: 2px;
+    }
+
+    .item-price {
+        font-size: 12px;
+    }
+
+    .item-old-price {
+        display: none;
+    }
+
+    /* Количество — совсем маленькое */
+    .item-quantity {
+        gap: 4px;
+    }
+
+    .qty-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
+    }
+
+    .qty-value {
+        font-size: 11px;
+        min-width: 14px;
+    }
+
+    /* Итого — без min-width */
+    .item-total {
+        font-size: 11px;
+        min-width: 0;
+        white-space: nowrap;
+    }
+
+    .remove-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .clear-cart-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .summary-row {
+        font-size: 13px;
+    }
+
+    .summary-row.total {
+        font-size: 15px;
+    }
+
+    .checkout-btn {
+        font-size: 13px;
+        padding: 13px;
     }
 }
