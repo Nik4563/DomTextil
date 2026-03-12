@@ -319,12 +319,17 @@
 
     /* Баннер — уменьшаем высоту */
     .banner-slide {
-        min-height: 200px;
+        min-height: auto;
     }
 
-    .banner-slide .banner-image {
-        width: 100%;
-        height: 250px;
+    .banner-image {
+        height: auto;
+    }
+
+    .banner-image img {
+        height: auto;
+        max-height: 300px; /* Ограничиваем максимальную высоту */
+        object-fit: contain;
     }
 
     /* Кнопки слайдера — меньше */
@@ -388,12 +393,19 @@
     }
 
     /* Баннер совсем компактный */
+        /* Баннер совсем компактный */
     .banner-slide {
-        min-height: 160px;
+        min-height: auto;
     }
 
-    .banner-slide .banner-image {
-        height: 160px;
+    .banner-image {
+        height: auto;
+    }
+
+    .banner-image img {
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
     }
 
     .slider-btn {
@@ -405,6 +417,8 @@
     .slider-nav {
         bottom: 8px;
         gap: 6px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* Галерея производства */

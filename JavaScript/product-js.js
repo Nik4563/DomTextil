@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (addToCartBtn) {
         addToCartBtn.addEventListener('click', function() {
             const product = {
-                id: 1,
+                id: Date.now(),
                 name: document.querySelector('.product-name')?.textContent?.trim() || 'Одеяло BAУ',
                 price: parseInt(document.querySelector('.product-price')?.textContent?.replace(/\D/g, '')) || 1000,
                 oldPrice: parseInt(document.querySelector('.product-old-price')?.textContent?.replace(/\D/g, '')) || null,
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 this.innerHTML = 'В КОРЗИНУ';
                 this.style.background = '';
-            }, 1500);
+            }, 500);
         });
     });
 });

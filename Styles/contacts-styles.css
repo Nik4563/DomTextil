@@ -18,6 +18,7 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 25px;
+    margin-top: 1px; /* Добавляем отступ сверху */
     font-size: 13px;
 }
 
@@ -403,6 +404,7 @@
 @media (max-width: 768px) {
     .main-content {
         padding: 20px 0 40px;
+        padding-top: 40px; /* Добавляем отступ как на других страницах */
     }
     
     .page-title {
