@@ -1,0 +1,722 @@
+/* ===== СТИЛИ СТРАНИЦЫ ДОСТАВКИ ===== */
+
+/* Основной контент */
+.main-content {
+    min-height: calc(100vh - 200px);
+    padding: 30px 0 60px;
+    background: #fff;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.breadcrumbs a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #e31e24;
+}
+
+.breadcrumbs .separator {
+    color: #ccc;
+}
+
+.breadcrumbs .current {
+    color: #e31e24;
+}
+
+/* Заголовок страницы */
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #e31e24;
+}
+
+/* Hero Banner */
+.delivery-hero {
+    background: linear-gradient(135deg, #e31e24 0%, #c62828 100%);
+    border-radius: 16px;
+    padding: 40px;
+    color: #fff;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-text {
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    min-width: 100px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Секции */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #e31e24;
+}
+
+/* Способы доставки */
+.delivery-methods {
+    margin-bottom: 50px;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.method-card {
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s;
+}
+
+.method-card:hover {
+    border-color: #e31e24;
+    box-shadow: 0 8px 30px rgba(227, 30, 36, 0.1);
+    transform: translateY(-3px);
+}
+
+.method-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.method-icon.cdek { background: #0078d2; }
+.method-icon.post { background: #0055a0; }
+.method-icon.courier { background: #7cb342; }
+.method-icon.pickup { background: #e31e24; }
+
+.method-info {
+    flex: 1;
+}
+
+.method-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.method-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.method-badge.popular {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.method-badge.free {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.method-details {
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+    color: #555;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row i {
+    width: 20px;
+    text-align: center;
+    color: #e31e24;
+}
+
+.method-note {
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin: 0;
+}
+
+/* Бесплатная доставка */
+.free-delivery {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f0e8 100%);
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin-bottom: 50px;
+    border-left: 5px solid #7cb342;
+}
+
+.free-delivery-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.free-delivery-icon {
+    width: 70px;
+    height: 70px;
+    background: #7cb342;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.free-delivery-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.free-delivery-text p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Сроки отправки */
+.shipping-time {
+    margin-bottom: 50px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #e31e24, #7cb342);
+    z-index: 0;
+}
+
+.timeline-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 3px solid #e31e24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #e31e24;
+    margin: 0 auto 15px;
+}
+
+.timeline-item:last-child .timeline-icon {
+    border-color: #7cb342;
+    color: #7cb342;
+}
+
+.timeline-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+.shipping-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: #fff8e1;
+    border-radius: 12px;
+    border-left: 4px solid #ffc107;
+}
+
+.shipping-note i {
+    font-size: 20px;
+    color: #ff8f00;
+    margin-top: 2px;
+}
+
+.shipping-note p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Оплата */
+.payment-section {
+    margin-bottom: 50px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.payment-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.payment-card:hover {
+    border-color: #e31e24;
+    transform: translateY(-3px);
+}
+
+.payment-icon {
+    width: 60px;
+    height: 60px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #e31e24;
+    margin: 0 auto 15px;
+}
+
+.payment-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.payment-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* FAQ */
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-question i {
+    color: #e31e24;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* CTA */
+.delivery-cta {
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    border-radius: 16px;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: #e31e24;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+}
+
+.cta-btn.phone {
+    background: #fff;
+    color: #333;
+}
+
+.cta-btn.phone:hover {
+    background: #f5f5f5;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .delivery-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-icon {
+        margin: 0 auto 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px 0 40px;
+        padding-top: 40px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .stat-item {
+        flex: 1;
+        min-width: 100px;
+        padding: 15px;
+    }
+
+    .free-delivery-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-item {
+        flex: 0 0 100%;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        justify-content: center;
+    }
+
+    .method-card {
+        padding: 20px;
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .delivery-cta {
+        padding: 30px 20px;
+    }
+
+    .cta-content h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .method-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .method-name {
+        font-size: 16px;
+    }
+
+    .detail-row {
+        font-size: 13px;
+    }
+
+    .free-delivery {
+        padding: 20px;
+    }
+
+    .free-delivery-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}

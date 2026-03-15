@@ -396,6 +396,9 @@
 
 /* Адаптивность */
 @media (max-width: 576px) {
+    .main-content{
+        padding-top: 40px;
+    }
     .order-success-block {
         padding: 40px 15px;
     }
