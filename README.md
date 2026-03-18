@@ -81,4 +81,6 @@
 
 ## 👨‍💻 Авторы
 
-Разработано **Nicekitos and Hell**
+Powered by **Nicekitos and Hell**
+
+Разработчики: Емельчиков Н. В., Савинов А. А.
