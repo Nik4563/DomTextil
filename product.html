@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="Styles/product-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- HEADER -->
     <header class="header">
@@ -173,7 +175,7 @@
                 <!-- Информация о товаре -->
                 <div class="product-info">
                     <h2 class="product-name">Одеяло BAУ</h2>
-                    
+
                     <div class="product-price-block">
                         <span class="product-price">1 000 ₽</span>
                         <span class="product-old-price">1 500 ₽</span>
@@ -181,14 +183,14 @@
                     </div>
 
                     <div class="product-rating">
-                        <div class="stars">
+                        <div class="stars" id="productStars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="rating-count">4.5 (12 отзывов)</span>
+                        <span class="rating-count" id="ratingCount">4.5 (12 отзывов)</span>
                     </div>
 
                     <div class="product-actions">
@@ -213,7 +215,7 @@
                             <span class="spec-label">Цвет</span>
                             <span class="spec-value">белый, кремовый, бежевый, серый</span>
                         </div>
-                        
+
                         <h3 class="specs-title">Материалы</h3>
                         <div class="spec-row">
                             <span class="spec-label">Наполнитель</span>
@@ -270,16 +272,25 @@
                 <h3 class="section-title">Описание</h3>
                 <div class="description-content">
                     <p>
-                        Одеяло soft touch 2 спальное легкое, плотностью 200 гр/м2. 
-                        Наполнитель после сильной зарядки волокон не сбивается и не сминается, полностью гипоаллергенный, 
-                        устойчив к размножению бактерий, грибков и других вредных микроорганизмов. Одеяло ВАУ обладает прекрасными 
-                        вентилирующими и теплоизоляционными свойствами, при этом сохраняется комфортная температура поверхности изделия, 
-                        что будет комфортно спать в жаркие летние ночи. Ткань чехла микрофибра белоснежного цвета приятна и нравится на ощупь, 
-                        не вызывает раздражения на чувствительной коже. Благодаря специальной обработке изделие практически не впитывает 
-                        влагу и высыхает очень быстро, выдерживает большое количество стирок. Одеяло облегченное всесезонное, достаточно 
-                        теплое в морозы, подходит для дома, дачи, сна. Всё что нужно для дома отдыха, спорта представлено в нашем каталоге, 
-                        просто нажмите на название ДомТекстиля и получите в широком линейке наших товаров для детей и взрослых. 
-                        Мы будем рады вам помочь. Вас в жизни недостаточно времени. Это правда, но пятнадцать минут найдём. С уважением, 
+                        Одеяло soft touch 2 спальное легкое, плотностью 200 гр/м2.
+                        Наполнитель после сильной зарядки волокон не сбивается и не сминается, полностью
+                        гипоаллергенный,
+                        устойчив к размножению бактерий, грибков и других вредных микроорганизмов. Одеяло ВАУ обладает
+                        прекрасными
+                        вентилирующими и теплоизоляционными свойствами, при этом сохраняется комфортная температура
+                        поверхности изделия,
+                        что будет комфортно спать в жаркие летние ночи. Ткань чехла микрофибра белоснежного цвета
+                        приятна и нравится на ощупь,
+                        не вызывает раздражения на чувствительной коже. Благодаря специальной обработке изделие
+                        практически не впитывает
+                        влагу и высыхает очень быстро, выдерживает большое количество стирок. Одеяло облегченное
+                        всесезонное, достаточно
+                        теплое в морозы, подходит для дома, дачи, сна. Всё что нужно для дома отдыха, спорта
+                        представлено в нашем каталоге,
+                        просто нажмите на название ДомТекстиля и получите в широком линейке наших товаров для детей и
+                        взрослых.
+                        Мы будем рады вам помочь. Вас в жизни недостаточно времени. Это правда, но пятнадцать минут
+                        найдём. С уважением,
                         команда ДомТектиля.
                     </p>
                 </div>
@@ -288,114 +299,35 @@
             <!-- Отзывы -->
             <div class="product-reviews">
                 <h3 class="section-title">Отзывы покупателей</h3>
-                
+
                 <!-- Статистика отзывов -->
                 <div class="reviews-summary">
                     <div class="rating-big">
-                        <span class="rating-number">4.5</span>
-                        <div class="stars-big">
+                        <span class="rating-number" id="averageRating">4.5</span>
+                        <div class="stars-big" id="summaryStars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="reviews-count">12 отзывов</span>
+                        <span class="reviews-count" id="reviewsCount">12 отзывов</span>
                     </div>
+
+                    <!-- Распределение по оценкам -->
+                    <div class="rating-distribution" id="ratingDistribution">
+                        <div class="rating-bars" id="ratingBars">
+                            <!-- Заполняется через JS -->
+                        </div>
+                    </div>
+
                     <button class="write-review-btn">Написать отзыв</button>
                 </div>
 
                 <!-- Список отзывов -->
-                <div class="reviews-list">
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-avatar">АК</div>
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Анна К.</span>
-                                    <span class="review-date">1 марта 2026</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            Отличное одеяло! Очень мягкое и лёгкое, при этом тёплое. После стирки не потеряло форму, быстро сохнет. Рекомендую!
-                        </p>
-                        <div class="review-images">
-                            <img src="Pictures/odeyalo_sintepon.jpg" alt="Фото отзыва">
-                        </div>
-                        <div class="review-actions">
-                            <button class="review-like">
-                                <i class="far fa-thumbs-up"></i>
-                                <span>5</span>
-                            </button>
-                        </div>
-                    </div>
+                <div class="reviews-list" id="reviewsList"></div>
 
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-avatar">МП</div>
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Михаил П.</span>
-                                    <span class="review-date">10 марта 2026</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            Хорошее одеяло за свою цену. Материал приятный на ощупь, швы качественные. Единственный минус — немного тонковато для зимы, но для межсезонья самое то.
-                        </p>
-                        <div class="review-actions">
-                            <button class="review-like">
-                                <i class="far fa-thumbs-up"></i>
-                                <span>3</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-avatar">ЕС</div>
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Елена С.</span>
-                                    <span class="review-date">5 марта 2026</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            Покупала одеяло для сына в общежитие. Он доволен, говорит очень удобное и не вызывает аллергии. Цена со скидкой приятно удивила!
-                        </p>
-                        <div class="review-actions">
-                            <button class="review-like">
-                                <i class="far fa-thumbs-up"></i>
-                                <span>8</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="show-more-reviews">Показать все отзывы</button>
+                <button class="show-more-reviews" id="showMoreReviews">Показать все отзывы</button>
             </div>
             <!-- Популярные товары (заглушка) -->
             <section class="popular-section">
@@ -483,7 +415,10 @@
     </footer>
 
     <script src="JavaScript/cart-js.js"></script>
+    <script src="JavaScript/search-js.js"></script>
     <script src="JavaScript/product-js.js"></script>
     <script src="JavaScript/header-js.js"></script>
+    <script src="JavaScript/reviews-js.js"></script>
 </body>
+
 </html>

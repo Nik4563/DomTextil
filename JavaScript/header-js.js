@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function(){
         catalogMenu.classList.add('active');
         overlay.classList.add('active');
         body.classList.add('menu-open');
+        
+        // Генерируем событие что каталог открыт (чтобы поиск закрылся)
+        document.dispatchEvent(new CustomEvent('catalogOpened'));
     }
     function closeMenu(){
         catalogBtn.classList.remove('active');

@@ -381,7 +381,355 @@ a:has(.logo) {
     font-weight: 600;
 }
 
-/* Адаптивность */
+/* ===== СТИЛИ ПОИСКА ===== */
+
+/* Оверлей */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Контейнер результатов поиска */
+.search-results {
+    position: fixed;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Шапка результатов */
+.search-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background: #f8f8f8;
+    border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
+}
+
+.search-results-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.search-results-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    transition: color 0.2s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-results-close:hover {
+    color: #e31e24;
+}
+
+/* Список результатов */
+.search-results-list {
+    overflow-y: auto;
+    max-height: 350px;
+    padding: 0;
+    flex: 1;
+}
+
+/* Элемент результата */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: #f0f0f0;
+}
+
+/* Изображение товара */
+.search-result-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.search-result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Информация о товаре */
+.search-result-info {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.search-result-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-result-name mark {
+    background: #fff3cd;
+    color: #333;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.search-result-category {
+    font-size: 12px;
+    color: #999;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Цены */
+.search-result-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-result-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e31e24;
+}
+
+.search-result-old-price {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Стрелка */
+.search-result-arrow {
+    color: #ccc;
+    font-size: 12px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.search-result-item:hover .search-result-arrow {
+    color: #e31e24;
+}
+
+/* Нет результатов */
+.search-no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.search-no-results i {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.search-no-results p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.search-no-results span {
+    font-size: 13px;
+}
+
+/* Футер результатов */
+.search-results-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 0 0 8px 8px;
+    flex-shrink: 0;
+}
+
+.search-view-all {
+    color: #e31e24;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.search-view-all:hover {
+    opacity: 0.8;
+}
+
+body.search-open {
+    overflow: hidden;
+}
+
+/* ===== АДАПТИВНОСТЬ ПОИСКА ===== */
+
+/* Планшеты */
+@media (max-width: 992px) {
+    .search-results {
+        top: 100px;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        max-height: calc(100vh - 120px);
+    }
+    
+    .search-results-list {
+        max-height: calc(100vh - 220px);
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .search-results {
+        top: 90px;
+        left: 15px;
+        right: 15px;
+        width: auto;
+        max-height: calc(100vh - 110px);
+        border-radius: 12px;
+    }
+    
+    .search-results-list {
+        max-height: calc(100vh - 200px);
+    }
+    
+    .search-result-item {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    
+    .search-result-image {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .search-result-name {
+        font-size: 14px;
+    }
+    
+    .search-result-price {
+        font-size: 15px;
+    }
+    
+    .search-results-header {
+        padding: 12px 15px;
+    }
+    
+    .search-results-footer {
+        padding: 12px 15px;
+    }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+    .search-results {
+        top: 85px;
+        left: 10px;
+        right: 10px;
+        max-height: calc(100vh - 100px);
+    }
+    
+    .search-results-list {
+        max-height: calc(100vh - 180px);
+    }
+    
+    .search-result-item {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .search-result-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .search-result-name {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    
+    .search-result-category {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    
+    .search-result-price {
+        font-size: 14px;
+    }
+    
+    .search-result-old-price {
+        font-size: 11px;
+    }
+    
+    .search-no-results {
+        padding: 30px 15px;
+    }
+    
+    .search-no-results i {
+        font-size: 36px;
+    }
+}
+
+/* ===== ОСНОВНАЯ АДАПТИВНОСТЬ ===== */
+
 /* Планшет */
 @media (max-width: 992px) {
     body {
