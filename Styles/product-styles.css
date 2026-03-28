@@ -718,22 +718,25 @@
     flex: 1;
     max-width: 300px;
     margin: 0 20px;
+    min-width: 200px; /* Минимальная ширина чтобы не сжималось */
 }
 
 .rating-bars {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    width: 100%;
 }
 
 .rating-bar-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-radius: 6px;
     transition: background 0.2s;
+    width: 100%;
 }
 
 .rating-bar-row:hover {
@@ -750,39 +753,42 @@
 }
 
 .rating-label {
-    font-size: 13px;
+    font-size: 14px;
     color: #666;
-    min-width: 45px;
+    min-width: 50px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
+    flex-shrink: 0; /* Не сжимать */
 }
 
 .rating-label i {
-    font-size: 10px;
+    font-size: 12px;
     color: #ffc107;
 }
 
 .rating-progress {
     flex: 1;
-    height: 8px;
+    height: 10px;
     background: #eee;
-    border-radius: 4px;
+    border-radius: 5px;
     overflow: hidden;
+    min-width: 80px; /* Минимальная ширина полоски */
 }
 
 .rating-fill {
     height: 100%;
     background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
-    border-radius: 4px;
+    border-radius: 5px;
     transition: width 0.4s ease;
 }
 
 .rating-count-bar {
-    font-size: 13px;
+    font-size: 14px;
     color: #666;
-    min-width: 25px;
+    min-width: 30px;
     text-align: right;
+    flex-shrink: 0; /* Не сжимать */
 }
 
 /* Адаптивность для мобильных */
@@ -797,6 +803,32 @@
         max-width: 100%;
         margin: 0;
         order: 2;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .rating-bars {
+        width: 100%;
+    }
+    
+    .rating-bar-row {
+        padding: 8px 0;
+        gap: 12px;
+    }
+    
+    .rating-label {
+        font-size: 15px;
+        min-width: 55px;
+    }
+    
+    .rating-progress {
+        height: 12px;
+        min-width: 100px;
+    }
+    
+    .rating-count-bar {
+        font-size: 15px;
+        min-width: 35px;
     }
     
     .rating-big {
@@ -809,12 +841,26 @@
     }
 }
 
-/* Сообщение "нет отзывов" */
-.no-reviews {
-    text-align: center;
-    padding: 40px;
-    color: #999;
-    font-size: 15px;
+@media (max-width: 480px) {
+    .rating-bar-row {
+        gap: 10px;
+        padding: 6px 0;
+    }
+    
+    .rating-label {
+        font-size: 14px;
+        min-width: 50px;
+    }
+    
+    .rating-progress {
+        height: 10px;
+        min-width: 80px;
+    }
+    
+    .rating-count-bar {
+        font-size: 14px;
+        min-width: 30px;
+    }
 }
 
 /* Адаптивность */
